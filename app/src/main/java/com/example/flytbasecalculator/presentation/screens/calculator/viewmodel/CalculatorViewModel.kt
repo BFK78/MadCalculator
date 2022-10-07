@@ -31,6 +31,7 @@ class CalculatorViewModel @Inject constructor(
 
     //button click function
     fun onButtonClick(content: String, calculateColor: Color) {
+
         when (calculateColor) {
             Color.White -> {
                 calculate += if (content == ".") {
@@ -45,6 +46,7 @@ class CalculatorViewModel @Inject constructor(
                     content
                 }
             }
+
             Color(0xFF26D4B6) -> {
                 calculate = if (content == "AC") {
                     afterNumber = false

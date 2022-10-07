@@ -1,5 +1,9 @@
 package com.example.flytbasecalculator.presentation.screens.calculator.viewmodel
 
+import com.example.flytbasecalculator.data.repository.CalculatorRepositoryTest
+import com.example.flytbasecalculator.domain.usecase.DeleteExpressionUseCase
+import com.example.flytbasecalculator.domain.usecase.GetAllExpressionUseCase
+import com.example.flytbasecalculator.domain.usecase.InsertExpressionUseCase
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Test
@@ -10,7 +14,14 @@ class CalculatorViewModelTest {
 
     @Before
     fun setUp() {
-        viewModel = CalculatorViewModel()
+
+        val repositoryTest = CalculatorRepositoryTest()
+
+        viewModel = CalculatorViewModel(
+            GetAllExpressionUseCase(repositoryTest),
+            InsertExpressionUseCase(repositoryTest),
+            DeleteExpressionUseCase(repositoryTest)
+        )
     }
 
     @Test
