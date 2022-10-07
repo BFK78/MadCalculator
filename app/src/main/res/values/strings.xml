@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">FlytBase Calculator</string>
+
+    <string name="login_email_placeholder"> Email </string>
+    <string name="error_email">Enter a valid email.</string>
+
+    <string name="login_password_placeholder">Password</string>
+    <string name="error_password">Enter a valid password.</string>
+
+    <string name="login_button">Login</string>
+
+    <string name="login_heading">Let\'s sign you in.</string>
+    <string name="login_subheading">Welcome back. You\'ve been missed!</string>
+</resources>
